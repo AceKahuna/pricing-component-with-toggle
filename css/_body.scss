@@ -1,0 +1,140 @@
+header{
+    text-align: center;
+    margin: 30px 0;
+    padding: 20px 10px;
+
+    h1{
+        padding: 20px;
+    }
+
+    .toggle{
+        display: flex;
+        align-items: center;
+        margin: 10px 20px;
+        justify-content: space-evenly;
+        color: $neutral2;
+
+        @include responsive(tab-port){
+            margin: 10px 210px;
+        }
+
+        .switch{
+            position: relative;
+            display: inline-block;
+            width: 70px;
+            height: 40px;
+            margin: 0 10px;
+            .slider{
+                position: absolute;
+                cursor: pointer;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: $gradient;
+                border-radius: 30px;
+                &::before{
+                    position: absolute;
+                    content: "";
+                    height: 30px;
+                    width: 30px;
+                    left: 5px;
+                    top: 5px;
+                    background-color: white;
+                    transition: 0.4s;
+                    border-radius: 50px;
+                }
+            }
+            input{
+                display: none;
+                &:checked + .slider{
+                    background: $neutral2;
+                }
+                &:checked + .slider:before{
+                    transform: translateX(30px);
+                }
+            }
+        }
+    }
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    // grid-template-columns: repeat(5, 1fr);
+    gap: 40px;
+    
+}
+
+.promo{
+    justify-self: center;
+
+    h1,h4{
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    p{
+        border-bottom: 1px solid $neutral2;
+        text-align: center;
+        padding: 30px 0;
+    }
+
+    .basic{
+        grid-column: 1/5;
+        padding: 50px 50px;
+        background: $neutral;
+        border-radius: 20px;
+        place-self: center center; //shorthancd for align-self and justify-self
+
+        .month{
+            display: none;
+        }
+    }
+
+    .pro{
+        grid-column: 1/5;
+        justify-self: center;
+        padding: 50px 50px;
+        background: $gradient;
+        border-radius: 20px;
+        color: $neutral;
+
+        .month{
+            display: none;
+        }
+
+        p{
+            border-bottom: 1px solid $neutral;
+        }  
+        
+        button{
+
+            background: $neutral;
+            color: $neutral3;
+
+            &:hover{
+                background: $gradient;
+                color: $neutral;
+                border: 1px solid $neutral;
+            }
+        }
+    }
+
+    .master{
+        grid-column: 1/5;
+        justify-self: center;
+        padding: 50px 50px;
+        background: $neutral;
+        border-radius: 20px;
+
+        .month{
+            display: none;
+        }
+    }
+}
+
+footer{
+    margin: 30px;
+    text-align: center;   
+}

@@ -1,0 +1,54 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url('/images/bg-top.svg');
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: top right;
+    font-family: $font;
+    font-size: 1rem;
+    color: $neutral3;
+    overflow-x: hidden;
+    align-items: center;
+
+    @include responsive(tab-port){
+        width: 100%;
+        font-size: 20px;
+        background-size: 20%;
+        background-image: url('/images/bg-bottom.svg');
+        background-position: bottom left;
+    }
+}
+
+a{
+    text-decoration: none;
+    color: hsl(237, 63%, 64%);
+}
+
+
+button{
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background: $gradient;
+    margin: 20px 10px;
+    font-family: $font;
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+    border: none;
+
+    &:focus{
+        outline: none;
+    }
+
+    &:hover{
+        background: $neutral;
+        color: $neutral3;
+        border: 1px solid $neutral3;
+    }
+}

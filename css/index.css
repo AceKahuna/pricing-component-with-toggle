@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url("/images/bg-top.svg");
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: top right;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  color: #6d708d;
+  overflow-x: hidden;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media only screen and (min-width: 620px) {
+  body {
+    width: 100%;
+    font-size: 20px;
+    background-size: 20%;
+    background-image: url("/images/bg-bottom.svg");
+    background-position: bottom left;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: #696fdd;
+}
+
+button {
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background: Linear-Gradient(125deg, #a3a8f0, #696fdd);
+  margin: 20px 10px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover {
+  background: #f6f6fe;
+  color: #6d708d;
+  border: 1px solid #6d708d;
+}
+
+header {
+  text-align: center;
+  margin: 30px 0;
+  padding: 20px 10px;
+}
+
+header h1 {
+  padding: 20px;
+}
+
+header .toggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px 20px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  color: #b3b5c6;
+}
+
+@media only screen and (min-width: 620px) {
+  header .toggle {
+    margin: 10px 210px;
+  }
+}
+
+header .toggle .switch {
+  position: relative;
+  display: inline-block;
+  width: 70px;
+  height: 40px;
+  margin: 0 10px;
+}
+
+header .toggle .switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: Linear-Gradient(125deg, #a3a8f0, #696fdd);
+  border-radius: 30px;
+}
+
+header .toggle .switch .slider::before {
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 30px;
+  left: 5px;
+  top: 5px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+
+header .toggle .switch input {
+  display: none;
+}
+
+header .toggle .switch input:checked + .slider {
+  background: #b3b5c6;
+}
+
+header .toggle .switch input:checked + .slider:before {
+  -webkit-transform: translateX(30px);
+          transform: translateX(30px);
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(200px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 40px;
+}
+
+.promo {
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.promo h1, .promo h4 {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.promo p {
+  border-bottom: 1px solid #b3b5c6;
+  text-align: center;
+  padding: 30px 0;
+}
+
+.promo .basic {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-column: 1/5;
+  padding: 50px 50px;
+  background: #f6f6fe;
+  border-radius: 20px;
+  place-self: center center;
+}
+
+.promo .basic .month {
+  display: none;
+}
+
+.promo .pro {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-column: 1/5;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  padding: 50px 50px;
+  background: Linear-Gradient(125deg, #a3a8f0, #696fdd);
+  border-radius: 20px;
+  color: #f6f6fe;
+}
+
+.promo .pro .month {
+  display: none;
+}
+
+.promo .pro p {
+  border-bottom: 1px solid #f6f6fe;
+}
+
+.promo .pro button {
+  background: #f6f6fe;
+  color: #6d708d;
+}
+
+.promo .pro button:hover {
+  background: Linear-Gradient(125deg, #a3a8f0, #696fdd);
+  color: #f6f6fe;
+  border: 1px solid #f6f6fe;
+}
+
+.promo .master {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-column: 1/5;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  padding: 50px 50px;
+  background: #f6f6fe;
+  border-radius: 20px;
+}
+
+.promo .master .month {
+  display: none;
+}
+
+footer {
+  margin: 30px;
+  text-align: center;
+}
+/*# sourceMappingURL=index.css.map */
