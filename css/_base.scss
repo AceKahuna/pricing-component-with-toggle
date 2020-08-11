@@ -16,11 +16,11 @@ body{
     align-items: center;
 
     @include responsive(tab-port){
+        background-image: url('/images/bg-bottom.svg'),url('/images/bg-top.svg');
+        background-position: bottom left, top right;
+        background-size: 20%, 30%;
         width: 100%;
         font-size: 20px;
-        background-size: 20%;
-        background-image: url('/images/bg-bottom.svg');
-        background-position: bottom left;
     }
 }
 

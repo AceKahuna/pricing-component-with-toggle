@@ -22,11 +22,11 @@ body {
 
 @media only screen and (min-width: 620px) {
   body {
+    background-image: url("/images/bg-bottom.svg"), url("/images/bg-top.svg");
+    background-position: bottom left, top right;
+    background-size: 20%, 30%;
     width: 100%;
     font-size: 20px;
-    background-size: 20%;
-    background-image: url("/images/bg-bottom.svg");
-    background-position: bottom left;
   }
 }
 
@@ -88,6 +88,12 @@ header .toggle {
   }
 }
 
+@media only screen and (min-width: 920px) {
+  header .toggle {
+    margin: 10px 350px;
+  }
+}
+
 header .toggle .switch {
   position: relative;
   display: inline-block;
@@ -146,6 +152,13 @@ header .toggle .switch input:checked + .slider:before {
       justify-self: center;
 }
 
+@media only screen and (min-width: 920px) {
+  .promo {
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+}
+
 .promo h1, .promo h4 {
   text-align: center;
   padding-bottom: 20px;
@@ -164,7 +177,26 @@ header .toggle .switch input:checked + .slider:before {
   padding: 50px 50px;
   background: #f6f6fe;
   border-radius: 20px;
+  width: 80%;
   place-self: center center;
+}
+
+@media only screen and (min-width: 620px) {
+  .promo .basic {
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width: 920px) {
+  .promo .basic {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    width: 30vw;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
 }
 
 .promo .basic .month {
@@ -180,7 +212,23 @@ header .toggle .switch input:checked + .slider:before {
   padding: 50px 50px;
   background: Linear-Gradient(125deg, #a3a8f0, #696fdd);
   border-radius: 20px;
+  width: 80%;
   color: #f6f6fe;
+}
+
+@media only screen and (min-width: 620px) {
+  .promo .pro {
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width: 920px) {
+  .promo .pro {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    grid-column: 3/4;
+    width: 20vw;
+  }
 }
 
 .promo .pro .month {
@@ -211,6 +259,22 @@ header .toggle .switch input:checked + .slider:before {
   padding: 50px 50px;
   background: #f6f6fe;
   border-radius: 20px;
+  width: 80%;
+}
+
+@media only screen and (min-width: 620px) {
+  .promo .master {
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width: 920px) {
+  .promo .master {
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 1;
+    grid-column: 4/5;
+    width: 30vw;
+  }
 }
 
 .promo .master .month {
