@@ -21,7 +21,9 @@ header{
         @include responsive(tab-land){
             margin: 10px 350px;
         }
- 
+
+      
+
         .switch{
             position: relative;
             display: inline-block;
@@ -65,20 +67,18 @@ header{
 .grid{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    // grid-template-columns: repeat(5, 1fr);
-    gap: 40px;  
-
-    
+    gap: 40px; 
+    place-items: center; 
 }
 
 .promo{
-    justify-self: center;
+    place-items: center;
 
     @include responsive(tab-land){
-        align-content: center;
+        align-items: center;
     }
 
-    h1,h4{
+    h4{
         text-align: center;
         padding-bottom: 20px;
     }
@@ -89,13 +89,46 @@ header{
         padding: 30px 0;
     }
 
+    .month, .annual{
+        text-align: center;
+        font-size: 2.5rem;
+        padding-bottom: 10px;
+        
+        @include responsive(tab-land){
+            font-size: 3.5rem;
+        }
+
+        &::before{
+            content: "$";
+            font-size: 1.5rem;
+            vertical-align: middle;
+            margin: 5px;
+
+            @include responsive(tab-land){
+                font-size: 2rem;
+                margin: 10px;
+            }
+        }
+    }
+
+    .inactive{
+        display: none;
+    }
+
     .basic{
         grid-column: 1/5;
-        padding: 50px 50px;
+        display: flex;
+        flex-direction: column;
+        padding: 50px 50px 10px 50px;
         background: $neutral;
         border-radius: 20px;
         width: 80%;
         place-self: center center; //shorthand for align-self and justify-self
+
+        @include responsive(big-desktop){
+            grid-column: 2/3;
+            width: 30vw;
+        }
 
         @include responsive(tab-port){
             width: 70%;
@@ -104,34 +137,38 @@ header{
         @include responsive(tab-land){
             grid-column: 2/3;
             width: 30vw;
-            align-self: center;
         }
 
-        .month{
-            display: none;
-        }
+
     }
 
     .pro{
         grid-column: 1/5;
+        display: flex;
+        flex-direction: column;
         justify-self: center;
-        padding: 50px 50px;
+        padding: 50px 50px 10px 50px;
         background: $gradient;
         border-radius: 20px;
         width: 80%;
         color: $neutral;
+
+        @include responsive(big-desktop){
+            grid-column: 3/5;
+            width: 30vw;
+            height: 700px;
+            z-index: 1;
+        }
         
         @include responsive(tab-port){
             width: 70%;
         }
         
         @include responsive(tab-land){
-            grid-column: 3/4;
-            width: 20vw;
-        }
-
-        .month{
-            display: none;
+            grid-column: 3/5;
+            width: 30vw;
+            height: 700px;
+            z-index: 1;
         }
 
         p{
@@ -153,23 +190,26 @@ header{
 
     .master{
         grid-column: 1/5;
+        display: flex;
+        flex-direction: column;
         justify-self: center;
-        padding: 50px 50px;
+        padding: 50px 50px 10px 50px;
         background: $neutral;
         border-radius: 20px;
         width: 80%;
+
+        @include responsive(big-desktop){
+            grid-column: 5/6;
+            width: 30vw;
+        }
 
         @include responsive(tab-port){
             width: 70%;
         }
 
         @include responsive(tab-land){
-            grid-column: 4/5;
+            grid-column: 5/6;
             width: 30vw;
-        }
-
-        .month{
-            display: none;
         }
     }
 }
