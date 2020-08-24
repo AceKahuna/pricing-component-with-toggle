@@ -10,16 +10,21 @@ header{
     .toggle{
         display: flex;
         align-items: center;
-        margin: 10px 20px;
-        justify-content: space-evenly;
+        justify-content: center;
+        margin: 10px 40px;
         color: $neutral2;
 
-        @include responsive(tab-port){
-            margin: 10px 210px;
+        p{
+            @include responsive(tab-port){
+                margin: 0 20px;
+            }
+            @include responsive(tab-land){
+                margin: 0 30px;
+            } 
         }
 
         @include responsive(tab-land){
-            margin: 10px 350px;
+            margin: 10px 100px;
         }
 
         .switch{
@@ -66,8 +71,11 @@ header{
     display: grid;
     // grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     grid-template-columns: repeat(3, 1fr);
-    gap: 40px; 
-    place-items: center; 
+    gap: 40px;
+
+    @include responsive(tab-land){
+        gap: 0;
+    }
 
     @include responsive(big-desktop){
         gap: 0;
@@ -76,10 +84,6 @@ header{
 
 .promo{
     place-items: center;
-
-    @include responsive(tab-land){
-        align-items: center;
-    }
 
     h4{
         text-align: center;
@@ -94,13 +98,9 @@ header{
 
     .month, .annual{
         text-align: center;
-        font-size: 2.5rem;
+        font-size: 3rem;
         padding-bottom: 10px;
         
-        @include responsive(tab-land){
-            font-size: 3.5rem;
-        }
-
         &::before{
             content: "$";
             font-size: 1.5rem;
@@ -117,61 +117,47 @@ header{
     .inactive{
         display: none;
     }
-
-    .basic{
-        grid-column: 1/5;
+    
+    .card{
         display: flex;
         flex-direction: column;
         padding: 50px 50px 10px 50px;
-        background: $neutral;
-        border-radius: 20px;
+        border-radius: 15px;
         width: 80%;
-        place-self: center center; //shorthand for align-self and justify-self
+    }
 
-        @include responsive(big-desktop){
-            grid-column: 2/3;
-            width: 30vw;
-        }
+    .basic{
+        grid-column: 1/5;
+        background: $neutral;
+        place-self: center center; //shorthand for align-self and justify-self
 
         @include responsive(tab-port){
             width: 70%;
         }
 
         @include responsive(tab-land){
-            grid-column: 2/3;
-            width: 30vw;
+            grid-column: 1;
+            width: 100%;
+            padding: 3vw;
         }
-
-
     }
 
     .pro{
         grid-column: 1/5;
-        display: flex;
-        flex-direction: column;
-        justify-self: center;
-        padding: 50px 50px 10px 50px;
+        justify-content: center;
         background: $gradient;
-        border-radius: 20px;
-        width: 80%;
         color: $neutral;
-
-        @include responsive(big-desktop){
-            grid-column: 3/4;
-            width: 30vw;
-            height: 700px;
-            z-index: 1;
-        }
         
         @include responsive(tab-port){
             width: 70%;
         }
         
         @include responsive(tab-land){
-            grid-column: 3/5;
-            width: 30vw;
-            height: 700px;
+            grid-column: 2;
+            width: 350px;
+            height: 600px;
             z-index: 1;
+            padding: 3vw;
         }
 
         p{
@@ -179,7 +165,6 @@ header{
         }  
         
         button{
-
             background: $neutral;
             color: $neutral3;
 
@@ -193,26 +178,16 @@ header{
 
     .master{
         grid-column: 1/5;
-        display: flex;
-        flex-direction: column;
-        justify-self: center;
-        padding: 50px 50px 10px 50px;
         background: $neutral;
-        border-radius: 20px;
-        width: 80%;
-
-        @include responsive(big-desktop){
-            grid-column: 4/5;
-            width: 30vw;
-        }
 
         @include responsive(tab-port){
             width: 70%;
         }
 
         @include responsive(tab-land){
-            grid-column: 5/6;
-            width: 30vw;
+            grid-column: 3;
+            width: 100%;
+            padding: 3vw;
         }
     }
 }
