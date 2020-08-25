@@ -84,6 +84,7 @@ header{
 
 .promo{
     place-items: center;
+    padding: 20px;
 
     h4{
         text-align: center;
@@ -123,17 +124,19 @@ header{
         flex-direction: column;
         padding: 50px 50px 10px 50px;
         border-radius: 15px;
-        width: 80%;
+        width: 100%;
+        max-width: 40rem;
+        box-shadow: 0 4rem 2.4rem rgba($neutral3, 0.1);
+
+        @include responsive(tab-port){
+            width: 30rem;
+        }
     }
 
     .basic{
         grid-column: 1/5;
-        background: $neutral;
-        place-self: center center; //shorthand for align-self and justify-self
-
-        @include responsive(tab-port){
-            width: 70%;
-        }
+        background: $light;
+        // place-self: center center; //shorthand for align-self and justify-self
 
         @include responsive(tab-land){
             grid-column: 1;
@@ -148,16 +151,13 @@ header{
         background: $gradient;
         color: $neutral;
         
-        @include responsive(tab-port){
-            width: 70%;
-        }
         
         @include responsive(tab-land){
             grid-column: 2;
-            width: 350px;
-            height: 600px;
+            width: 100%;
             z-index: 1;
-            padding: 3vw;
+            padding-top: 5.5rem;
+            padding-bottom: 5rem;
         }
 
         p{
@@ -178,11 +178,7 @@ header{
 
     .master{
         grid-column: 1/5;
-        background: $neutral;
-
-        @include responsive(tab-port){
-            width: 70%;
-        }
+        background: $light;
 
         @include responsive(tab-land){
             grid-column: 3;

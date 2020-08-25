@@ -11,9 +11,10 @@ body {
   background-repeat: no-repeat;
   background-size: 50%;
   background-position: top right;
+  background-color: #f5f5ff;
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
-  color: #6d708d;
+  color: #494c5f;
   overflow-x: hidden;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -42,7 +43,6 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    padding: 50px;
   }
 }
 
@@ -186,6 +186,7 @@ header .toggle .switch input:checked + .slider:before {
 
 .promo {
   place-items: center;
+  padding: 20px;
 }
 
 .promo h4 {
@@ -233,21 +234,23 @@ header .toggle .switch input:checked + .slider:before {
           flex-direction: column;
   padding: 50px 50px 10px 50px;
   border-radius: 15px;
-  width: 80%;
+  width: 100%;
+  max-width: 40rem;
+  -webkit-box-shadow: 0 4rem 2.4rem rgba(109, 112, 141, 0.1);
+          box-shadow: 0 4rem 2.4rem rgba(109, 112, 141, 0.1);
+}
+
+@media only screen and (min-width: 620px) {
+  .promo .card {
+    width: 30rem;
+  }
 }
 
 .promo .basic {
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-column: 1/5;
-  background: #f6f6fe;
-  place-self: center center;
-}
-
-@media only screen and (min-width: 620px) {
-  .promo .basic {
-    width: 70%;
-  }
+  background: white;
 }
 
 @media only screen and (min-width: 920px) {
@@ -270,20 +273,14 @@ header .toggle .switch input:checked + .slider:before {
   color: #f6f6fe;
 }
 
-@media only screen and (min-width: 620px) {
-  .promo .pro {
-    width: 70%;
-  }
-}
-
 @media only screen and (min-width: 920px) {
   .promo .pro {
     -ms-grid-column: 2;
     grid-column: 2;
-    width: 350px;
-    height: 600px;
+    width: 100%;
     z-index: 1;
-    padding: 3vw;
+    padding-top: 5.5rem;
+    padding-bottom: 5rem;
   }
 }
 
@@ -306,13 +303,7 @@ header .toggle .switch input:checked + .slider:before {
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-column: 1/5;
-  background: #f6f6fe;
-}
-
-@media only screen and (min-width: 620px) {
-  .promo .master {
-    width: 70%;
-  }
+  background: white;
 }
 
 @media only screen and (min-width: 920px) {

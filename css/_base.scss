@@ -9,9 +9,10 @@ body{
     background-repeat: no-repeat;
     background-size: 50%;
     background-position: top right;
+    background-color: $background;
     font-family: $font;
     font-size: 1rem;
-    color: $neutral3;
+    color: $neutral4;
     overflow-x: hidden;
     align-items: center;
 
@@ -27,7 +28,6 @@ body{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: 50px;
     }
 }
 
