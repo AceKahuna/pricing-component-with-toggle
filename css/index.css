@@ -14,7 +14,7 @@ body {
   background-color: #f5f5ff;
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
-  color: #494c5f;
+  color: #6d708d;
   overflow-x: hidden;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -27,7 +27,7 @@ body {
     background-position: bottom left, top right;
     background-size: 20%, 30%;
     width: 100%;
-    font-size: 20px;
+    font-size: 16px;
   }
 }
 
@@ -59,7 +59,7 @@ button {
   padding: 10px 20px;
   border-radius: 5px;
   background: Linear-Gradient(125deg, #a3a8f0, #696fdd);
-  margin: 20px 10px 10px;
+  margin: 20px 10px 10px 10px;
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
   color: white;
@@ -239,7 +239,7 @@ header .toggle .switch input:checked + .slider:before {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 30px 20px 10px 20px;
+  padding: 50px 20px 50px 20px;
   border-radius: 15px;
   width: 100%;
   max-width: 40rem;
@@ -266,6 +266,7 @@ header .toggle .switch input:checked + .slider:before {
     grid-column: 1;
     width: 100%;
     padding: 3vw;
+    padding-bottom: 15px;
   }
 }
 
@@ -287,7 +288,7 @@ header .toggle .switch input:checked + .slider:before {
     width: 100%;
     z-index: 1;
     padding-top: 4rem;
-    padding-bottom: 3.5rem;
+    padding-bottom: 3rem;
   }
 }
 
@@ -323,6 +324,7 @@ header .toggle .switch input:checked + .slider:before {
     grid-column: 3;
     width: 100%;
     padding: 3vw;
+    padding-bottom: 15px;
   }
 }
 

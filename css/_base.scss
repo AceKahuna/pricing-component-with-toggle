@@ -12,7 +12,7 @@ body{
     background-color: $background;
     font-family: $font;
     font-size: 1rem;
-    color: $neutral4;
+    color: $neutral3;
     overflow-x: hidden;
     align-items: center;
 
@@ -21,7 +21,7 @@ body{
         background-position: bottom left, top right;
         background-size: 20%, 30%;
         width: 100%;
-        font-size: 20px;
+        font-size: 16px;
     }
 
     @include responsive(tab-land){
@@ -43,7 +43,7 @@ button{
     padding: 10px 20px;
     border-radius: 5px;
     background: $gradient;
-    margin: 20px 10px 10px;
+    margin: 20px 10px 10px 10px;
     font-family: $font;
     font-size: 1rem;
     color: white;
