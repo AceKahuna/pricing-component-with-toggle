@@ -59,7 +59,7 @@ button {
   padding: 10px 20px;
   border-radius: 5px;
   background: Linear-Gradient(125deg, #a3a8f0, #696fdd);
-  margin: 40px 10px 20px;
+  margin: 20px 10px 10px;
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
   color: white;
@@ -83,8 +83,9 @@ header {
   padding: 20px 10px;
 }
 
-header h1 {
-  padding: 20px;
+header h2 {
+  padding-bottom: 20px;
+  color: #6d708d;
 }
 
 header .toggle {
@@ -186,24 +187,31 @@ header .toggle .switch input:checked + .slider:before {
 
 .promo {
   place-items: center;
-  padding: 20px;
+  padding: 0 20px;
+}
+
+@media only screen and (min-width: 920px) {
+  .promo {
+    padding: 0 50px;
+  }
 }
 
 .promo h4 {
   text-align: center;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }
 
 .promo p {
   border-bottom: 1px solid #b3b5c6;
   text-align: center;
-  padding: 30px 0;
+  padding: 15px 0;
 }
 
 .promo .month, .promo .annual {
   text-align: center;
   font-size: 3rem;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #b3b5c6;
 }
 
 .promo .month::before, .promo .annual::before {
@@ -215,7 +223,6 @@ header .toggle .switch input:checked + .slider:before {
 
 @media only screen and (min-width: 920px) {
   .promo .month::before, .promo .annual::before {
-    font-size: 2rem;
     margin: 10px;
   }
 }
@@ -232,7 +239,7 @@ header .toggle .switch input:checked + .slider:before {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 50px 50px 10px 50px;
+  padding: 30px 20px 10px 20px;
   border-radius: 15px;
   width: 100%;
   max-width: 40rem;
@@ -279,12 +286,16 @@ header .toggle .switch input:checked + .slider:before {
     grid-column: 2;
     width: 100%;
     z-index: 1;
-    padding-top: 5.5rem;
-    padding-bottom: 5rem;
+    padding-top: 4rem;
+    padding-bottom: 3.5rem;
   }
 }
 
 .promo .pro p {
+  border-bottom: 1px solid #f6f6fe;
+}
+
+.promo .pro .month, .promo .pro .annual {
   border-bottom: 1px solid #f6f6fe;
 }
 
