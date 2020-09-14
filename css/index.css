@@ -19,6 +19,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  min-height: 100vh;
 }
 
 @media only screen and (min-width: 620px) {
@@ -74,7 +75,8 @@ button:focus {
 button:hover {
   background: #f6f6fe;
   color: #6d708d;
-  border: 1px solid #6d708d;
+  -webkit-box-shadow: inset 0 0 2px #6d708d;
+          box-shadow: inset 0 0 2px #6d708d;
 }
 
 header {
@@ -182,6 +184,8 @@ header .toggle .switch input:checked + .slider:before {
 @media only screen and (min-width: 1200px) {
   .grid {
     gap: 0;
+    max-width: 1050px;
+    width: 100%;
   }
 }
 
@@ -193,6 +197,13 @@ header .toggle .switch input:checked + .slider:before {
 @media only screen and (min-width: 920px) {
   .promo {
     padding: 0 50px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .promo {
+    max-width: 1050px;
+    width: 100%;
   }
 }
 
@@ -239,7 +250,7 @@ header .toggle .switch input:checked + .slider:before {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 50px 20px 50px 20px;
+  padding: 50px 20px 20px 20px;
   border-radius: 15px;
   width: 100%;
   max-width: 40rem;
@@ -308,7 +319,8 @@ header .toggle .switch input:checked + .slider:before {
 .promo .pro button:hover {
   background: Linear-Gradient(125deg, #a3a8f0, #696fdd);
   color: #f6f6fe;
-  border: 1px solid #f6f6fe;
+  -webkit-box-shadow: inset 0 0 2px #f6f6fe;
+          box-shadow: inset 0 0 2px #f6f6fe;
 }
 
 .promo .master {
